@@ -101,6 +101,7 @@ body {
     width: 100%;
     display: flex;
     overflow-x: auto;
+    cursor: grab;
     /* justify-content: space-around; */
 }
 
@@ -118,6 +119,7 @@ body {
     background-color: white;
     background-size: cover;
     border-radius: 10px;
+    cursor: grab;
     -webkit-box-shadow: 3px 10px 14px 6px rgba(0, 0, 0, 0.16);
     box-shadow: 3px 10px 14px 6px rgba(0, 0, 0, 0.16);
     -webkit-overflow-scrolling: touch;
