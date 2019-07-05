@@ -15,43 +15,45 @@
         <!-- Modal Content (The Image) -->
         <img class="modal-content" id="modalImage">
     </div>
-    <div class="cards-list">
-        <div id="card0" class="container" style="background-image: url(images/img4.jpg);">
-            <div class="overlay">
-                <div class="items"></div>
-                <button class="btn" onclick="enlargeImage(this.parentElement.parentElement.id)">Enlarge</button>
+    <div id="carousel" class="carousel">
+        <div class="carousel-wrapper">
+            <div id="cards-list" class="cards-list">
+                <div id="card0" class="card" style="background-image: url(images/img4.jpg);">
+                    <div class="overlay">
+                        <button class="btn" onclick="enlargeImage(this.parentElement.parentElement.id)">Enlarge</button>
+                    </div>
+                </div>
+                <div id="card1" class="card" style="background-image: url(images/img0.jpg);">
+                    <div class="overlay">
+                        <button class="btn" onclick="enlargeImage(this.parentElement.parentElement.id)">Enlarge</button>
+                    </div>
+                </div>
+                <div id="card2" class="card" style="background-image: url(images/img2.jpg);">
+                    <div class="overlay">
+                        <button class="btn" onclick="enlargeImage(this.parentElement.parentElement.id)">Enlarge</button>
+                    </div>
+                </div>
+                <div id="card3" class="card" style="background-image: url(images/img1.jpg);">
+                    <div class="overlay">
+                        <button class="btn" onclick="enlargeImage(this.parentElement.parentElement.id)">Enlarge</button>
+                    </div>
+                </div>
+                <div id="card4" class="card" style="background-image: url(images/img5.jpg);">
+                    <div class="overlay">
+                        <button class="btn" onclick="enlargeImage(this.parentElement.parentElement.id)">Enlarge</button>
+                    </div>
+                </div>
+                <div id="card5" class="card" style="background-image: url(images/img3.jpg);">
+                    <div class="overlay">
+                        <button class="btn" onclick="enlargeImage(this.parentElement.parentElement.id)">Enlarge</button>
+                    </div>
+                </div>
             </div>
+            <div class="gradient-left"></div>
+            <div class="gradient-right"></div>
         </div>
-        <div id="card1" class="container" style="background-image: url(images/img0.jpg);">
-            <div class="overlay">
-                <div class="items"></div>
-                <button class="btn" onclick="enlargeImage(this.parentElement.parentElement.id)">Enlarge</button>
-            </div>
-        </div>
-        <div id="card2" class="container" style="background-image: url(images/img2.jpg);">
-            <div class="overlay">
-                <div class="items"></div>
-                <button class="btn" onclick="enlargeImage(this.parentElement.parentElement.id)">Enlarge</button>
-            </div>
-        </div>
-        <div id="card3" class="container" style="background-image: url(images/img1.jpg);">
-            <div class="overlay">
-                <div class="items"></div>
-                <button class="btn" onclick="enlargeImage(this.parentElement.parentElement.id)">Enlarge</button>
-            </div>
-        </div>
-        <div id="card4" class="container" style="background-image: url(images/img5.jpg);">
-            <div class="overlay">
-                <div class="items"></div>
-                <button class="btn" onclick="enlargeImage(this.parentElement.parentElement.id)">Enlarge</button>
-            </div>
-        </div>
-        <div id="card5" class="container" style="background-image: url(images/img3.jpg);">
-            <div class="overlay">
-                <div class="items"></div>
-                <button class="btn" onclick="enlargeImage(this.parentElement.parentElement.id)">Enlarge</button>
-            </div>
-        </div>
+        <a id="prev" class="control prev"></a>
+        <a id="next" class="control next"></a>
     </div>
 </body>
 

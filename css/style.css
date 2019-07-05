@@ -21,7 +21,7 @@ body {
 .modal {
     display: none;
     position: fixed; 
-    z-index: 1;
+    z-index: 5;
     left: 0;
     top: 0;
     width: 100%; 
@@ -96,21 +96,36 @@ body {
 
 /*      END OF MODAL        */
 
+.carousel-wrapper {
+    overflow: hidden;
+    position: relative;
+    background: transparent;
+    z-index: 1;
+    height: 360px;
+}
+
 .cards-list {
     z-index: 0;
     width: 100%;
+    position: relative;
+    top: 0;
+    left: -300px;
     display: flex;
     overflow-x: auto;
     cursor: grab;
     /* justify-content: space-around; */
 }
 
+#cards-list.shifting {
+    transition: left .2s ease-out;
+}
 
-.container {
+.card {
     width: 300px;
     height: 300px;
     flex-shrink: 0;
     position: relative;
+    float: left;
     top: 0;
     right: 0;
     left: 0;
@@ -123,7 +138,66 @@ body {
     -webkit-box-shadow: 3px 10px 14px 6px rgba(0, 0, 0, 0.16);
     box-shadow: 3px 10px 14px 6px rgba(0, 0, 0, 0.16);
     -webkit-overflow-scrolling: touch;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
 }
+
+.gradient-left{
+    display: block;
+    position: relative;
+    background-image: linear-gradient(to right, whitesmoke, transparent 100%);
+    margin-top: -270px;
+    height: 150px;
+    width: 8%;
+    content: '';
+}
+
+.gradient-right{
+    display: block;
+    position: relative;
+    float: right;
+    right:0;
+    background-image: linear-gradient(to left, whitesmoke, transparent 100%);
+        margin-top: -150px;
+    height: 150px;
+    width:8%;
+    content: '';
+}
+
+.control {
+    position: absolute;
+    top: 50%;
+    width: 40px;
+    height: 40px;
+    background: #fff;
+    border-radius: 20px;
+    margin-top: -20px;
+    box-shadow: 1px 1px 10px rgba(0,0,0,.3);
+    z-index: 2;
+}
+
+.prev, .next {
+    background-size: 22px;
+    background-position: center;
+    background-repeat: no-repeat;
+    cursor: pointer;
+}
+
+.next {
+    background-image: url(https://cdn0.iconfinder.com/data/icons/navigation-set-arrows-part-one/32/ChevronRight-512.png);
+    right: 10px;
+}
+
+.prev {
+    background-image: url(https://cdn0.iconfinder.com/data/icons/navigation-set-arrows-part-one/32/ChevronLeft-512.png);
+    left: 10px;
+}
+
+.prev:active,
+.next:active {
+  transform: scale(0.8);
+}
+
   
 .overlay {
     width: 100%;
@@ -177,11 +251,11 @@ body {
     outline: transparent;
 }
   
-  .container:hover .overlay {
+  .card:hover .overlay {
     opacity: 1;
 }
 
-.container:hover .overlay .btn {
+.card:hover .overlay .btn {
     opacity: 1;
     transform: translateY(-10px);
     transition-delay: 0.3s;
@@ -191,20 +265,20 @@ body {
     visibility: hidden;
 }
 
-.cards-list > .container { 
+.cards-list > .card { 
     visibility: visible; 
 }
 
-.cards-list > .container {
+.cards-list > .card {
     transition: opacity 150ms linear 100ms, transform 150ms ease-in-out 100ms; 
 }
 
-.cards-list:hover > .container {
+.cards-list:hover > .card {
     opacity: 0.5; 
     transform: scale(0.96); 
 }
 
-.cards-list > .container:hover { 
+.cards-list > .card:hover { 
     opacity: 1; 
     transform: scale(1); 
     transition-delay: 0ms, 0ms; 
@@ -212,13 +286,13 @@ body {
 
 /* TESTING
 
-.cards-list:hover .container{
+.cards-list:hover .card{
     filter:blur(3px);
     opacity:.5;
     transform: scale(.98);
     box-shadow:none;
   } */
-  /* .cards-list:hover .container:hover{
+  /* .cards-list:hover .card:hover{
     transform:scale(1);
     filter:blur(0px);
     opacity:1;
