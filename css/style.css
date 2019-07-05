@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+/* @import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap'); */
 html {
     scroll-behavior: smooth;
 }
@@ -109,7 +109,7 @@ body {
     width: 100%;
     position: relative;
     top: 0;
-    left: -300px;
+    /* left: 320px; */
     display: flex;
     overflow-x: auto;
     cursor: grab;
