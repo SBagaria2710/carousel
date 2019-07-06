@@ -2,8 +2,6 @@ let slider = document.getElementById('carousel'),
     sliderItems = document.getElementById('cards-list'),
     prev = document.getElementById('prev'),
     next = document.getElementById('next');
-
-console.log(typeof(sliderItems.style.left))
  
 slide(slider, sliderItems, prev, next);
  
@@ -86,7 +84,6 @@ function checkIndex () {
     items.style.left = -320 + "px";
       index = slidesLength - 1;
     }
-    console.log(index)
     if (index == 3) {
       items.style.left = (1 * slideSize) + "px";
       index = 0;
@@ -103,7 +100,6 @@ invoke = (clicked_id) => {
 enlargeImage = (superParentID) => {
     let imageUrl = document.getElementById(superParentID).style.backgroundImage;
     let filePath = stripURL(imageUrl);
-    console.log(filePath);
     let modal = document.getElementById("modal-container");
     let modalImg = document.getElementById("modalImage");
     modal.style.display = "block";

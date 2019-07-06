@@ -79,7 +79,7 @@ body {
     position: fixed;
     top: 15px;
     right: 35px;
-    color: #f1f1f1;
+    color: #e4e4e4;
     font-size: 40px;
     font-weight: bold;
     transition: 0.3s;
@@ -88,7 +88,7 @@ body {
 
 .close:hover,
 .close:focus {
-    color: #000;
+    color: #fff;
     text-decoration: none;
     cursor: pointer;
 }
